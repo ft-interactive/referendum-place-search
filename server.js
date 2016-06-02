@@ -67,13 +67,15 @@ function postcode_to_gss_code(postcode, cb) {
     }
   }
 
-  const stream = fs.createReadStream('data/test.csv');
+  const [outcode, incode] = postcode.split(' ');
+  const stream = fs.createReadStream(`data/outcodes/${outcode}.csv`);
+
   stream.on('error', send_error);
   stream.pipe(csv())
         .on('data', data => {
-          cache.set(data.pc, data.ca);
-          if (data.pc === postcode) {
-            cb(null, data.ca)
+          cache.set(outcode + ' ' + data.pc, data.ca);
+          if (data.pc === incode) {
+            cb(null, data.ca);
             sent = true;
           }
         })
