@@ -14,9 +14,6 @@ const error_cache = LRU({
 });
 
 const match_postcode = /[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}/g;
-const match_outcode = /^[A-Z]{1,2}[0-9][0-9A-Z]/g;
-const match_incode = /[0-9][A-Z]{2}$/g;
-
 
 // TODO: uncaught exception handler
 
@@ -58,10 +55,7 @@ function postcode_to_gss_code(postcode, cb) {
     if (sent) return;
     error_cache.set(postcode, true);
     if (e instanceof Error) {
-      if (e.code === 'ENOENT') {
-        e = new Error('No such file');
-      }
-      cb(e, '');
+      cb(e.code === 'ENOENT' ? null : e, '');
     } else {
       cb(null, '');
     }
