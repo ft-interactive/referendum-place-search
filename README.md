@@ -3,5 +3,5 @@
 ## Run locally
 
 ```
-node server
+npm start
 ```
