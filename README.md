@@ -1,1 +1,7 @@
-# referendum-place-search
+# EU referendum place search
+
+## Run locally
+
+```
+node server
+```
