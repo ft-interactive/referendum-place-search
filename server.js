@@ -80,6 +80,18 @@ function postcode_to_gss_code(postcode, cb) {
 
 function handleRequest(request, response){
 
+    if (request.url === '/__gtg') {
+      response.statusCode = 200;
+      response.end('ok');
+      return;
+    }
+
+    if (request.url === '/favicon.ico') {
+      response.statusCode = 404;
+      response.end('');
+      return;
+    }
+
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Cache-Control', 'max-age=31536000');
     response.setHeader('Content-Type', 'text/plain');
