@@ -1,0 +1,16 @@
+{
+  "name": "ft-ig-referendum-place-search",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
