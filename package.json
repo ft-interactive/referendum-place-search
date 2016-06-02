@@ -17,5 +17,10 @@
     "url": "https://github.com/ft-interactive/referendum-place-search/issues"
   },
   "homepage": "https://github.com/ft-interactive/referendum-place-search#readme",
-  { "engines" : { "node" : "6.2.x" } }
+  "engines": {
+    "node": "6.2.x"
+  },
+  "dependencies": {
+    "csv-parser": "^1.9.3"
+  }
 }
