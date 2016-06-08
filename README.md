@@ -32,3 +32,10 @@ E09000028
 **`/__gtg`**
 
 Used to test the service is alive. Simply returns a `200` statusCode and and `OK` in the body.
+
+
+## Licence
+
+* Contains OS data © Crown copyright and database right 2016
+* Contains Royal Mail data © Royal Mail copyright and database right 2016
+* Contains National Statistics data © Crown copyright and database right 2016
