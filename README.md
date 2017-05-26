@@ -1,3 +1,9 @@
+# DEPRECATED
+
+New API: [ig-uk-postcode-api](https://github.com/Financial-Times/ig-uk-postcode-api)
+
+---
+
 # EU referendum place search
 
 ## Run locally
